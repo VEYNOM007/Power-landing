@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #0A2463;
+  --primary-light: #3E92CC;
+  --accent: #FF6B35;
+  --bg: #FFFFFF;
+  --text: #0A2463;
+  --text-muted: #0A246380;
+  --border: #E8E8E8;
+  --card-bg: rgba(10, 36, 99, 0.03);
+  --card-border: rgba(10, 36, 99, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Light glassmorphism cards */
+.glass-light {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 1px 3px rgba(10, 36, 99, 0.04);
+}
+
+/* Button base hover */
+.btn-power {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-power:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(10, 36, 99, 0.15);
+}

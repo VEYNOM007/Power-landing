@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        <link rel="icon" href="/logo_Power.jpg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

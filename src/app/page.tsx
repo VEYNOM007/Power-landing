@@ -37,7 +37,7 @@ function trackDownload(platform: "android" | "ios") {
 function GooglePlayIcon() {
   return (
     <Image
-      src="/google-play-store-new.jpg"
+      src="/google-play-icon.png"
       alt="Google Play Store"
       width={24}
       height={24}

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 // ─── Animation variants ───────────────────────────────────────
 const fadeUp = {
@@ -289,11 +290,16 @@ function Footer() {
 // ─── PAGE ──────────────────────────────────────────────────────
 export default function HomePage() {
   return (
-    <main className="relative bg-white">
-      <Header />
-      <HeroSection />
-      <HowItWorksSection />
-      <Footer />
-    </main>
+    <GoogleReCaptchaProvider
+      reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+      scriptProps={{ async: true, defer: true, appendTo: "head" }}
+    >
+      <main className="relative bg-white">
+        <Header />
+        <HeroSection />
+        <HowItWorksSection />
+        <Footer />
+      </main>
+    </GoogleReCaptchaProvider>
   );
 }

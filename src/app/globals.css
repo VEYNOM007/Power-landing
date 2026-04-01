@@ -40,3 +40,8 @@ body {
   transform: scale(1.05);
   box-shadow: 0 8px 24px rgba(10, 36, 99, 0.15);
 }
+
+/* Hide reCAPTCHA badge on localhost */
+.grecaptcha-badge {
+  visibility: hidden;
+}

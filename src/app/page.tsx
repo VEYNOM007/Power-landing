@@ -128,7 +128,7 @@ function HeroSection() {
           <a
             href={PLAY_STORE_URL}
             onClick={() => trackDownload("android")}
-            className="block w-full sm:w-auto"
+            className="block w-[180px] sm:w-auto"
           >
             <Image
               src="/images-google-play.png"
@@ -144,7 +144,7 @@ function HeroSection() {
           <a
             href={TESTFLIGHT_URL}
             onClick={() => trackDownload("ios")}
-            className="block w-full sm:w-auto"
+            className="block w-[180px] sm:w-auto"
           >
             <Image
               src="/image-apple-store.png"

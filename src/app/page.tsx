@@ -20,7 +20,7 @@ const fadeIn = {
 };
 
 // ─── Download URLs (remplacer par les vrais liens) ─────────────
-const PLAY_STORE_URL = "#"; // URL Play Store interne
+const PLAY_STORE_URL = "https://play.google.com/apps/internaltest/4701552360389906449";
 const TESTFLIGHT_URL = "#"; // URL TestFlight Apple
 
 // ─── GA Event Tracker ─────────────────────────────────────────
@@ -74,14 +74,17 @@ function HeroSection() {
       <div className="relative max-w-3xl mx-auto text-center">
         {/* Logo Power — grand et centré */}
         <motion.div variants={fadeUp} custom={0} initial="hidden" animate="visible" className="mb-10">
-          <Image
-            src="/logo_Power.jpg"
-            alt="Power"
-            width={480}
-            height={480}
-            className="mx-auto rounded-3xl"
-            priority
-          />
+          <picture className="mx-auto block">
+            <source srcset="/logo-power-dark.png" media="(prefers-color-scheme: dark)" />
+            <Image
+              src="/logo-power-light.png"
+              alt="Power"
+              width={480}
+              height={480}
+              className="mx-auto rounded-3xl"
+              priority
+            />
+          </picture>
         </motion.div>
 
         {/* Badge Beta */}

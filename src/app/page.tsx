@@ -75,9 +75,8 @@ function HeroSection() {
         {/* Logo Power — grand et centré */}
         <motion.div variants={fadeUp} custom={0} initial="hidden" animate="visible" className="mb-10">
           <picture className="mx-auto block">
-            <source srcset="/logo-power-dark.png" media="(prefers-color-scheme: dark)" />
             <Image
-              src="/logo-power-light.png"
+              src="/logo-Power-light.jpg"
               alt="Power"
               width={480}
               height={480}

@@ -37,7 +37,7 @@ function trackDownload(platform: "android" | "ios") {
 
 function StepIcon({ number }: { number: number }) {
   return (
-    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#3E92CC] text-white font-bold text-lg shrink-0">
+    <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#3E92CC] text-white font-bold text-base sm:text-lg shrink-0">
       {number}
     </div>
   );
@@ -70,25 +70,21 @@ function Header() {
 // ─── HERO SECTION ──────────────────────────────────────────────
 function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-5 pt-20 pb-12">
+    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-5 pt-20 pb-8 sm:pb-12">
       <div className="relative max-w-3xl mx-auto text-center">
         {/* Logo Power — grand et centré */}
-        <motion.div variants={fadeUp} custom={0} initial="hidden" animate="visible" className="mb-10">
-          <picture className="mx-auto block">
-            <Image
-              src="/logo-Power-light.jpg"
+        <motion.div variants={fadeUp} custom={0} initial="hidden" animate="visible" className="mb-6 sm:mb-10 w-full flex justify-center">
+            <img
+              src="/power-logo.png"
               alt="Power"
-              width={480}
-              height={480}
-              className="mx-auto rounded-3xl"
-              priority
+              style={{ maxWidth: '520px', height: 'auto' }}
+              className="rounded-3xl w-full sm:w-[90%] md:w-[80%]"
             />
-          </picture>
         </motion.div>
 
         {/* Badge Beta */}
-        <motion.div variants={fadeUp} custom={1} initial="hidden" animate="visible" className="mb-8">
-          <span className="inline-block px-5 py-2 rounded-full bg-[#FF6B35] text-white text-xs font-semibold tracking-wide">
+        <motion.div variants={fadeUp} custom={1} initial="hidden" animate="visible" className="mb-6 sm:mb-8">
+          <span className="inline-block px-4 py-1.5 sm:px-5 sm:py-2 rounded-full bg-[#FF6B35] text-white text-[11px] sm:text-xs font-semibold tracking-wide">
             Programme de test exclusif — Bêta 1.0
           </span>
         </motion.div>
@@ -99,7 +95,7 @@ function HeroSection() {
           custom={2}
           initial="hidden"
           animate="visible"
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-[#0A2463]"
+          className="text-xl sm:text-3xl md:text-5xl font-extrabold leading-tight mb-4 sm:mb-6 text-[#0A2463]"
         >
           Prenez le contrôle.{" "}
           <br className="hidden sm:block" />
@@ -113,7 +109,7 @@ function HeroSection() {
           custom={3}
           initial="hidden"
           animate="visible"
-          className="text-lg sm:text-xl text-[#0A2463] opacity-85 max-w-xl mx-auto mb-12 leading-[1.6]"
+          className="text-sm sm:text-lg md:text-xl text-[#0A2463] opacity-85 max-w-xl mx-auto mb-8 sm:mb-12 leading-relaxed sm:leading-[1.6] px-2 sm:px-0"
         >
           Accédez en avant-première à la version bêta et façonnez l&apos;outil
           qui va redéfinir la livraison de carburant avec nous.
@@ -125,20 +121,20 @@ function HeroSection() {
           custom={4}
           initial="hidden"
           animate="visible"
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
         >
           {/* Google Play */}
           <a
             href={PLAY_STORE_URL}
             onClick={() => trackDownload("android")}
-            className="block w-[180px] sm:w-auto"
+            className="block w-[160px] sm:w-[180px]"
           >
             <Image
               src="/images-google-play.png"
               alt="Disponible sur Google Play"
               width={220}
               height={66}
-              className="w-full sm:w-[220px] h-auto"
+              className="w-full h-auto"
               priority
             />
           </a>
@@ -147,14 +143,14 @@ function HeroSection() {
           <a
             href={TESTFLIGHT_URL}
             onClick={() => trackDownload("ios")}
-            className="block w-[180px] sm:w-auto"
+            className="block w-[160px] sm:w-[180px]"
           >
             <Image
               src="/image-apple-store.png"
               alt="Disponible sur l'App Store"
               width={220}
               height={66}
-              className="w-full sm:w-[220px] h-auto"
+              className="w-full h-auto"
               priority
             />
           </a>
@@ -166,7 +162,7 @@ function HeroSection() {
           custom={5}
           initial="hidden"
           animate="visible"
-          className="mt-16"
+          className="mt-10 sm:mt-16"
         >
           <div className="w-6 h-10 rounded-full border-2 border-[#0A2463]/20 mx-auto flex items-start justify-center pt-2">
             <motion.div
@@ -205,19 +201,19 @@ function HowItWorksSection() {
   ];
 
   return (
-    <section className="py-24 px-5 bg-[#FAFAFA]">
+    <section className="py-16 sm:py-24 px-4 sm:px-5 bg-[#FAFAFA]">
       <div className="max-w-4xl mx-auto">
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-[#0A2463]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-[#0A2463]">
             Comment ça <span className="text-[#FF6B35]">marche ?</span>
           </h2>
-          <p className="text-[#0A2463] opacity-70 text-lg">
+          <p className="text-[#0A2463] opacity-70 text-base sm:text-lg">
             Trois étapes simples pour rejoindre l&apos;aventure.
           </p>
         </motion.div>
@@ -231,12 +227,12 @@ function HowItWorksSection() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
-              className="glass-light rounded-2xl p-6 sm:p-8 flex items-start gap-5 hover:shadow-md transition-shadow duration-200"
+              className="glass-light rounded-2xl p-4 sm:p-8 flex items-start gap-3 sm:gap-5 hover:shadow-md transition-shadow duration-200"
             >
               <StepIcon number={step.num} />
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-[#0A2463]">{step.title}</h3>
-                <p className="text-[#0A2463] opacity-70 leading-relaxed">
+                <h3 className="text-sm sm:text-xl font-semibold mb-1 sm:mb-2 text-[#0A2463]">{step.title}</h3>
+                <p className="text-xs sm:text-base text-[#0A2463] opacity-70 leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -251,7 +247,7 @@ function HowItWorksSection() {
 // ─── FOOTER ────────────────────────────────────────────────────
 function Footer() {
   return (
-    <footer className="py-12 px-5 bg-white border-t border-[#E8E8E8]">
+    <footer className="py-8 sm:py-12 px-4 sm:px-5 bg-white border-t border-[#E8E8E8]">
       <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2">
           <span className="text-sm font-bold text-[#0A2463]">Power</span>

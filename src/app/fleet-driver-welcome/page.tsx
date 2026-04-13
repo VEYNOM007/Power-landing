@@ -106,23 +106,23 @@ function WelcomeContent() {
             {[
               {
                 step: 1,
-                title: "Installez l&apos;application Power",
+                title: "Installez l'application Power",
                 desc: "Cliquez sur le bouton ci-dessus",
               },
               {
                 step: 2,
-                title: "Ouvrez l&apos;app et appuyez sur &quot;Connexion Chauffeur&quot;",
-                desc: "Bouton en bas de l&apos;écran de connexion",
+                title: "Ouvrez l'app et appuyez sur « Connexion Chauffeur »",
+                desc: "Bouton en bas de l'écran de connexion",
               },
               {
                 step: 3,
                 title: "Entrez votre email professionnel",
-                desc: "Celui où vous avez reçu l&apos;invitation",
+                desc: "Celui où vous avez reçu l'invitation",
               },
               {
                 step: 4,
                 title: "Utilisez le mot de passe que vous venez de créer",
-                desc: "Et c&apos;est parti ! 🚀",
+                desc: "Et c'est parti ! 🚀",
               },
             ].map((item, idx) => (
               <motion.div

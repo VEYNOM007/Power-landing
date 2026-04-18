@@ -45,7 +45,7 @@ export default function PrivacyPage() {
             </p>
             <div className="my-6 rounded-lg border border-slate-200 bg-slate-50 p-6">
               <p className="m-0">
-                <strong>Moussa <Kouma></strong>
+                <strong>Moussa {"<Kouma>"}</strong>
                 <br />
                 Personne physique en cours d'immatriculation
                 <br />
